@@ -3,7 +3,10 @@
 	"version": "0.0.0",
 	"scripts": {
 		"prepare": "lefthook install",
-		"lint": "biome check --write"
+		"lint": "biome check --write",
+		"dev": "node --watch src/index.ts",
+		"build": "tsc",
+		"start": "node dist/index.js"
 	},
 	"license": "UNLICENSED",
 	"devEngines": {
@@ -17,6 +20,12 @@
 	"type": "module",
 	"devDependencies": {
 		"@biomejs/biome": "2.5.13",
-		"lefthook": "^2.1.14"
+		"@types/node": "^22.20.3",
+		"lefthook": "^2.1.14",
+		"typescript": "^7.0.2"
+	},
+	"dependencies": {
+		"@hono/node-server": "^2.1.1",
+		"hono": "^4.13.8"
 	}
 }
